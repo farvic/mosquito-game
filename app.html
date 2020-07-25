@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="logic.js"></script>
+</head>
+
+<body onresize="adjustScreenSize()">
+
+    <div class="panel">
+        <div class = "lives">
+            <img src="images/heart.png" alt="heart">
+            <img src="images/heart.png" alt="heart">
+            <img src="images/empty_heart.png" alt="heart">
+        </div>
+        
+        <div class = "chronometer">
+            Remaining time: ?
+        </div>
+    </div>
+
+    <script>
+        setInterval(function() {
+            randomMosquitoPosition();
+        }, 1000);
+    </script>
+</body>
+
+</html>
