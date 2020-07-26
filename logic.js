@@ -15,9 +15,9 @@ if(level==='easy') {
     mosquitoLife = 1500;
 }
 if(level==='hard') {
-    mosquitoLife = 1000;
+    mosquitoLife = 750;
 }
-else if(level==='omg') mosquitoLife = 750;
+else if(level==='omg') mosquitoLife = 500;
 
 // var score = document.getElementById('score');
 
