@@ -7,7 +7,7 @@
 
 /** Sets the cursor to be our image */
 html {
-    cursor: url(images/bug_zapper.png) 30 30, auto;
+    cursor: url(images/bug_zapper.png) 25 25, auto;
 }
 
 body {

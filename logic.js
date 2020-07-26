@@ -40,7 +40,6 @@ adjustGameScreenSize();
 
 
 function randomMosquitoPosition() {
-
     // Remove the previous mosquito (if there's any...)
     if (document.getElementById('mosquito')) {
         document.getElementById('mosquito').remove();
@@ -49,10 +48,9 @@ function randomMosquitoPosition() {
             document.getElementById('life'+lives).src="images/empty_heart.png";
             lives--;
         } else{
-            // document.getElementById('final-score').innerHTML = score;
             window.location.href="game_over.html?"+score;
         };
-
+        if(lives == 0) window.location.href="game_over.html?"+score;
     }
     //background-size 1280x1017
     //! Needs to add mobile resposiveness
