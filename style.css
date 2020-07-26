@@ -23,7 +23,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* margin-top: 200px; */
+    margin-top: 100px;
     color: #fff;
 }
 
@@ -94,7 +94,7 @@ body {
     .display-3 {
         font-size: 2rem;
     }
-    .game-over img {
+    .game-over img, #mosquito-main {
         height: 350px;
         width: 350px;
     }
@@ -107,7 +107,7 @@ body {
     .display-3 {
         font-size: 2rem;
     }
-    .game-over img {
+    .game-over img, #mosquito-main {
         height: 250px;
         width: 250px;
     }
