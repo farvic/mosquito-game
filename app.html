@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mosquito Game</title>
+    <meta name="author" content="Victor Araujo">
+    <meta name="description" content="Mosquito game developed during the JS course">
+    <meta name="keywords" content="javascript, game, mosquito">
     <link rel="stylesheet" href="style.css">
     <script src="logic.js"></script>
 </head>
@@ -11,21 +14,24 @@
 <body onresize="adjustScreenSize()">
 
     <div class="panel">
-        <div class = "lives">
-            <img src="images/heart.png" alt="heart">
-            <img src="images/heart.png" alt="heart">
-            <img src="images/empty_heart.png" alt="heart">
+        <div id = "lives">
+            <img id="life1" src="images/heart.png" alt="heart">
+            <img id="life2" src="images/heart.png" alt="heart">
+            <img id="life3" src="images/heart.png" alt="heart">
         </div>
-        
-        <div class = "chronometer">
-            Remaining time: ?
+
+        <div class="panel-text">
+            Score: <span id="current-score">0</span><br>
+            Remaining time: <span id="chronometer"></span>
         </div>
     </div>
 
     <script>
-        setInterval(function() {
+        document.getElementById('chronometer').innerHTML = time;
+        
+        var createMosquito = setInterval(function() {
             randomMosquitoPosition();
-        }, 1000);
+        }, mosquitoLife);
     </script>
 </body>
 

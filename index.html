@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mosquito Game</title>
+    <meta name="author" content="Victor Araujo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mosquito game developed during the JS course">
+    <meta name="keywords" content="javascript, game, mosquito">
+    <script src="logic.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function startGame() {
+            var level = document.getElementById('level').value;
+            
+            if(level === ''){
+                alert('Select your level');
+                return false;
+            }            
+            window.location.href = "app.html?"+level;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="display-2 text-white">
+            <!-- <span>VICTORY!</span> -->
+            <img src="images/game.png" alt="Mosquito Game">
+        </div>
+        <div class="container mt-5">
+            <div>
+                <select class="form-control" name="difficulty" id="level">
+                    <option>Select your level</option>
+                    <option value="easy">Easy</option>
+                    <option value="hard">Hard</option>
+                    <option value="omg">OMG</option>
+                </select>
+            </div>
+            <button type="button" class="btn btn-danger btn-lg mt-2"
+            onclick="startGame()">
+                Play
+            </button>
+        </div>
+    </div>    
+</body>
+</html>

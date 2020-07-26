@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Mosquito Game</title>
+</head>
+<body>
+    <div class="container victory">
+        <div class="display-2 text-white">
+            <span>VICTORY!</span>
+            <!-- <img src="images/victory.png" alt="Game Over"> -->
+        </div>
+        <div>
+            <div class="display-3">Total Score: <span id="final-score">0</span> </div>
+        </div>
+        <div>
+            <button type="button" class="btn btn-dark btn-lg mt-5"
+            onclick="window.location.href='index.html'">
+                Play Again
+            </button>
+        </div>
+    </div>
+    <script>
+        var score = window.location.search;
+        score = score.replace('?','');
+        document.getElementById('final-score').innerHTML = score;
+    </script>    
+</body>
+</html>

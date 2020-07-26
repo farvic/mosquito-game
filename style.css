@@ -1,9 +1,33 @@
+@font-face {
+    font-family: "Pixel";
+    src: url("fonts/arcadeclassic.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/** Sets the cursor to be our image */
+html {
+    cursor: url(images/bug_zapper.png) 30 30, auto;
+}
+
 body {
     background-image: url(images/bg.jpg);
     background-color: #000;
     background-position: center;
     background-repeat: no-repeat;
+    font-family: 'Pixel', Arial, sans-serif;
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 200px; */
+    color: #fff;
+}
+
+/** Different mosquito sizes and directions */
 
 .mosquito1 {
     width: 50px;
@@ -28,6 +52,7 @@ body {
     transform: scaleX(-1);
 }
 
+/** Main panel which shows your lives, score and remaining time. */
 .panel {
     position: absolute;
     width: 190px;
@@ -39,12 +64,60 @@ body {
     opacity: 0.7;
 }
 
-.lives {
-    float: left;
-}
-
-.chronometer {
+.panel-text {
     float: left;
     font-size: 20px;
     font-weight: bold;
 }
+
+#lives {
+    float: left;
+}
+
+.victory {
+    margin-top: 30vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: fit-content;
+}
+
+.game-over {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 50px; */
+}
+
+@media (max-width: 1024px) {
+    .victory {
+        /* margin-top: 200px; */
+    }
+    .display-3 {
+        font-size: 2rem;
+    }
+    .game-over img {
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .victory {
+        /* margin-top: 200px; */
+    }
+    .display-3 {
+        font-size: 2rem;
+    }
+    .game-over img {
+        height: 250px;
+        width: 250px;
+    }
+}
+
+@media (min-width:767.98px) and (max-width:1024.02px) and (min-height: 1023.98px) and (max-height: 1366px) {
+/* @media (width:1024px) and (height: 1366px) { */
+    .container {
+        margin-top: 400px;
+    }
+}
+
+
