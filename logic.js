@@ -3,6 +3,7 @@ var height = 0;
 var lives = 3;
 var time = 60;
 var score = 0;
+var multiply = 1;
 
 var mosquitoLife = 1500;
 
@@ -13,11 +14,16 @@ level = level.replace('?','');
 
 if(level==='easy') {
     mosquitoLife = 1500;
+    multiply = 1;
 }
 if(level==='hard') {
     mosquitoLife = 750;
+    multiply = 2;
 }
-else if(level==='omg') mosquitoLife = 500;
+else if(level==='omg') {
+    mosquitoLife = 600;
+    multiply = 3;
+}
 
 // var score = document.getElementById('score');
 
@@ -32,7 +38,7 @@ var chronometer = setInterval(function(){
     if (time < 0) {
         clearInterval(chronometer);
         clearInterval(createMosquito);
-        window.location.href="victory.html?"+score;
+        window.location.href="victory.html?"+score+'('+level+')';
     } else document.getElementById('chronometer').innerHTML = time;
 },mosquitoLife);
 
@@ -48,9 +54,9 @@ function randomMosquitoPosition() {
             document.getElementById('life'+lives).src="images/empty_heart.png";
             lives--;
         } else{
-            window.location.href="game_over.html?"+score;
+            window.location.href="game_over.html?"+score+'('+level+')';
         };
-        if(lives == 0) window.location.href="game_over.html?"+score;
+        if(lives == 0) window.location.href="game_over.html?"+score+'('+level+')';
     }
     //background-size 1280x1017
     //! Needs to add mobile resposiveness
@@ -84,7 +90,7 @@ function randomMosquitoPosition() {
     mosquito.id = 'mosquito';
     mosquito.onclick = function () {
         this.remove();
-        score++;
+        score = score + multiply;
         document.getElementById('current-score').innerHTML = score;
     }
 
