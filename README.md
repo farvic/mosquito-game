@@ -1,3 +1,5 @@
+(Play the game)[https://farvic.github.io/mosquito-game/]
+
 # Introduction
 
 Kill the mosquito game developed by Victor Araujo during the Javascript course.
@@ -16,6 +18,10 @@ The game allows the user to choose a level which will affect on how long the mos
 Any feedback is welcome.
 
 ## Updates
+
+## Patch 1.0.5
+
+### The user is now able to set the game duration to 30, 60 or 90 seconds.
 
 ## Patch 1.0.4
 

@@ -64,6 +64,14 @@ body {
     opacity: 0.7;
 }
 
+.form-control {
+    width: 185px;
+}
+select {
+    text-align: center;
+
+}
+
 .panel-text {
     float: left;
     font-size: 20px;

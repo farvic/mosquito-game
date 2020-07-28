@@ -6,11 +6,19 @@ var score = 0;
 var multiply = 1;
 
 var mosquitoLife = 1500;
+var level = '';
+var search = window.location.search;
+search = search.replace('?','');
+var split = search.split('&',2);
+level = split[0];
+time = split[1];
 
-var level = window.location.search;
-level = level.replace('?','');
+console.log(level);
+// console.log(time);
 
 // document.getElementById('final-score').innerHTML = finalScore;
+
+//Game difficulty
 
 if(level==='easy') {
     mosquitoLife = 1500;
@@ -24,6 +32,12 @@ else if(level==='omg') {
     mosquitoLife = 600;
     multiply = 3;
 }
+
+// Game duration
+
+if(time === 'thirty') time = 30;
+else if (time === 'sixty') time = 60;
+else time = 90;
 
 // var score = document.getElementById('score');
 
@@ -39,7 +53,7 @@ var chronometer = setInterval(function(){
         clearInterval(chronometer);
         clearInterval(createMosquito);
         window.location.href="victory.html?"+score+'('+level+')';
-    } else document.getElementById('chronometer').innerHTML = time;
+    } else document.getElementById('chronometer').innerHTML = Math.floor(time);
 },mosquitoLife);
 
 adjustGameScreenSize();
@@ -91,6 +105,7 @@ function randomMosquitoPosition() {
     mosquito.onclick = function () {
         this.remove();
         score = score + multiply;
+        // time+=0.2;
         document.getElementById('current-score').innerHTML = score;
     }
 
