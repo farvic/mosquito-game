@@ -1,4 +1,4 @@
-(Play the game)[https://farvic.github.io/mosquito-game/]
+[Play the game](https://farvic.github.io/mosquito-game/)
 
 # Introduction
 
