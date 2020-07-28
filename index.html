@@ -12,12 +12,17 @@
     <script>
         function startGame() {
             var level = document.getElementById('level').value;
+            var duration = document.getElementById('duration').value;
             
             if(level === ''){
                 alert('Select your level');
                 return false;
+            }
+            if(duration === ''){
+                alert('Select the duration of the game');
+                return false;
             }            
-            window.location.href = "app.html?"+level;
+            window.location.href = "app.html?"+level+'&'+duration;
         }
     </script>
 </head>
@@ -34,6 +39,14 @@
                     <option value="easy">Easy</option>
                     <option value="hard">Hard</option>
                     <option value="omg">OMG</option>
+                </select>
+            </div>
+            <div>
+                <select class="form-control" name="duration" id="duration" required>
+                    <option value="" disable selected>Game duration</option>
+                    <option value="thirty">30 seconds</option>
+                    <option value="sixty">60 seconds</option>
+                    <option value="ninety">90 seconds</option>
                 </select>
             </div>
             <button type="button" class="btn btn-danger btn-lg mt-2"
